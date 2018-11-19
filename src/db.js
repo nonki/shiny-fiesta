@@ -10,8 +10,9 @@ const games = [
 ]
 
 module.exports.getGameByKey = (keyId, cbk) => {
-  if (!games[keyId])
+  const id = parseInt(keyId)
+  if (!games[id])
     return cbk({error: 'Game not found.'}, null)
 
-  return cbk(null, games[keyId])
+  return cbk(null, games[id])
 }
