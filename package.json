@@ -1,0 +1,26 @@
+{
+  "name": "shiny-fiesta",
+  "version": "1.0.0",
+  "description": "Backend API for Milica Birthday Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaequitas/shiny-fiesta.git"
+  },
+  "keywords": [
+    "backend",
+    "nodejs",
+    "node",
+    "birthday",
+    "milica"
+  ],
+  "author": "nonki",
+  "license": "SEE LICENSE IN ./LICENSE",
+  "bugs": {
+    "url": "https://github.com/vaequitas/shiny-fiesta/issues"
+  },
+  "homepage": "https://github.com/vaequitas/shiny-fiesta#readme"
+}
