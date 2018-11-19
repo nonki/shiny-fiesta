@@ -6,7 +6,16 @@ console.log('Loaded app');
 const app = express()
 
 app.get('/', (req, res) => {
-  res.set(200).send('Hello, World!')
+  res.set(200).send({
+    '/keys': {
+      type: 'collection',
+      children: {
+        '/keys/:keyId': {
+          type: 'singular',
+        }
+      }
+    }
+  })
 })
 
 app.get('/keys', (req, res) => {
