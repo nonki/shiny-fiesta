@@ -1,9 +1,14 @@
 const games = require('../config/local/games.json')
 
-module.exports.getGameByKey = (keyId, cbk) => {
-  const id = parseInt(keyId)
-  if (!games[id])
-    return cbk({error: 'Game not found.'}, null)
+module.exports = {
+  getGameByKey: (keyId, cbk) => {
+    const id = parseInt(keyId)
+    if (!games[id])
+      return cbk({error: 'Game not found.'}, null)
 
-  return cbk(null, games[id])
+    return cbk(null, games[id])
+  },
+  getGames: (limit, cbk) => {
+    return cbk(null, games)
+  }
 }

@@ -1,5 +1,5 @@
 const express = require('express')
-const { getGameByKey } = require('./db.js')
+const { getGameByKey, getGames } = require('./db.js')
 
 console.log('Loaded app');
 
@@ -9,7 +9,16 @@ app.get('/', (req, res) => {
   res.set(200).send('Hello, World!')
 })
 
-app.get('/key/:keyId', (req, res) => {
+app.get('/keys', (req, res) => {
+  getGames(null, (err, games) => {
+    if (err)
+      return res.set(500).send(err)
+
+    res.set(200).send(games)
+  })
+})
+
+app.get('/keys/:keyId', (req, res) => {
   res.set(200).send(req.game)
 })
 
