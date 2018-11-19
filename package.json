@@ -4,7 +4,8 @@
   "description": "Backend API for Milica Birthday Application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/vaequitas/shiny-fiesta/issues"
   },
-  "homepage": "https://github.com/vaequitas/shiny-fiesta#readme"
+  "homepage": "https://github.com/vaequitas/shiny-fiesta#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
