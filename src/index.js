@@ -1,6 +1,6 @@
 import 'dotenv/config'
-const express = require('express')
-const { getGameByKey, getGames } = require('./db.js')
+import express from 'express'
+import { getGameByKey, getGames } from './db.js'
 
 console.log('Loaded app');
 

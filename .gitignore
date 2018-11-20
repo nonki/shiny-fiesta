@@ -77,3 +77,4 @@ typings/
 
 config/local/*
 .env
+lib/*
