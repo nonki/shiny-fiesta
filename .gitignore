@@ -76,3 +76,4 @@ typings/
 .serverless
 
 config/local/*
+.env

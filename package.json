@@ -27,9 +27,11 @@
   },
   "homepage": "https://github.com/vaequitas/shiny-fiesta#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "eslint": "^5.9.0"
   },
   "dependencies": {
+    "dotenv": "^6.1.0",
     "express": "^4.16.4"
   }
 }
