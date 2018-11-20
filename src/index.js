@@ -17,7 +17,7 @@ app.param('keyId', (req, res, next, id) => {
 })
 
 app.get('/hongji', (req, res) => {
-  return res.set(200).send('Wassup dog')
+  return res.set(200).send({text: "Wassup dog"})
 })
 
 app.post('/auth', (req, res) => {
