@@ -30,7 +30,7 @@ app.post('/auth', (req, res) => {
 })
 
 app.get('/keys', (req, res) => {
-  getGames(null, (err, games) => {
+  getGames((err, games) => {
     if (err) {return res.set(500).send(err)}
 
     res.set(200).send(games)

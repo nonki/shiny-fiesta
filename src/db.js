@@ -7,7 +7,7 @@ module.exports = {
 
     return cbk(null, games[id])
   },
-  getGames: (limit, cbk) => {
+  getGames: (cbk) => {
     return cbk(null, games)
   },
 }
