@@ -40,7 +40,7 @@ app.get('/keys/:keyId', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-  res.set(404).send()
+  res.set(404).send('HTTP 404 - Not Found')
 })
 
 app.listen(process.env.PORT || 8080)
