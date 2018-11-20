@@ -10,7 +10,7 @@
     "watch": "nodemon --watch src --exec npm start",
     "start": "npm run build && node lib/index.js",
     "serve": "npm run build && node lib/index.js",
-    "test": "npm run build && mocha --require babel-register"
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
