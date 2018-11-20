@@ -17,12 +17,14 @@ app.param('keyId', (req, res, next, id) => {
 })
 
 app.post('/auth', (req, res) => {
-  if (!req.body.password)
+  if (!req.body.password) {
     return res.set(400).send('HTTP 400 - Bad Request')
+  }
 
   const password = req.body.password.toLowerCase()
-  if (process.env.PASSWORD != password)
+  if (process.env.PASSWORD != password) {
     return res.set(401).send('HTTP 401 - Unauthorized')
+  }
 
   res.set(200).send('HTTP 200 - OK')
 })
