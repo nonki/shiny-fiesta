@@ -3,9 +3,9 @@ const games = require('../config/local/games.json')
 module.exports = {
   getGameByKey: (keyId, cbk) => {
     const id = parseInt(keyId)
-    const game = games.filter(el => parseInt(el.id) === id)
+    const game = games.filter(el => parseInt(el.id) === id).pop()
     if (!game) {
-      return cbk({ error: 'Game not found.' }, null)
+      return cbk({}, null)
     }
 
     return cbk(null, game)
