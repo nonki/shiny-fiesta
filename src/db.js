@@ -1,4 +1,4 @@
-const games = require('../config/local/games.json')
+const games = require(`../config/local/games.${process.env.ENV}.json`)
 
 module.exports = {
   getGameByKey: (keyId, cbk) => {
