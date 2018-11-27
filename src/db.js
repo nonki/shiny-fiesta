@@ -17,12 +17,7 @@ module.exports = {
   getGames: (cbk) => {
     let gamesReturn = games
     if (process.env.ENV.toLowerCase() !== 'live') {
-      gamesReturn = gamesReturn.map(el => {
-        return {
-          ...el,
-          key: '11111-22222-33333',
-        }
-      })
+      gamesReturn = [...gamesReturn.map(el => el.id)]
     }
 
     return cbk(null, gamesReturn)
