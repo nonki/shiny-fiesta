@@ -9,7 +9,7 @@ module.exports = {
     }
 
     if (process.env.ENV.toLowerCase() !== 'live') {
-      game.key = '11111-22222-33333'
+      game.key = '3V6YG-99BCK-9LQKK'
     }
 
     return cbk(null, game)
