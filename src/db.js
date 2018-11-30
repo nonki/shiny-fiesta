@@ -9,17 +9,12 @@ module.exports = {
     }
 
     if (process.env.ENV.toLowerCase() !== 'live') {
-      game.key = '3V6YG-99BCK-9LQKK'
+      game.key = process.env.DEV_KEY
     }
 
     return cbk(null, game)
   },
   getGames: (cbk) => {
-    let gamesReturn = games
-    if (process.env.ENV.toLowerCase() !== 'live') {
-      gamesReturn = [...gamesReturn.map(el => el.id)]
-    }
-
-    return cbk(null, gamesReturn)
+    return cbk(null, [...games.map(el => el.id)])
   },
 }
