@@ -8,6 +8,10 @@ app.use(express.json())
 app.use(cors());
 
 app.param('keyId', (req, res, next, id) => {
+  if (!req.query.secret || process.env.SECRET != req.query.secret) {
+    res.status(401).send();
+  }
+
   getGameByKey(id, (err, game) => {
     if (err) {return res.status(404).send(err)}
 
@@ -30,7 +34,7 @@ app.post('/auth', (req, res) => {
     return res.status(401).send('HTTP 401 - Unauthorized')
   }
 
-  res.status(200).send('HTTP 200 - OK')
+  res.status(200).send({ secret: process.env.SECRET})
 })
 
 app.get('/keys', (req, res) => {
